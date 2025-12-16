@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2 mb-6">
             <img 
-              src="https://i.ibb.co/q3cRCJ7c/bannertransp.png" 
+              src="https://wsrv.nl/?url=https://i.ibb.co/q3cRCJ7c/bannertransp.png&w=400&output=webp" 
               alt="Pangaré Automotivo" 
               className="h-24 md:h-32 w-auto object-contain brightness-0 invert"
               width="256"
