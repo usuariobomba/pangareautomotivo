@@ -15,14 +15,15 @@ const Navbar: React.FC = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b-4 border-accent-dark bg-background-light">
       <div className="px-4 md:px-10 py-4 flex items-center justify-between">
-        {/* Logo Section */}
-        <div className="flex items-center">
-          <img 
-            src="https://i.ibb.co/q3cRCJ7c/bannertransp.png" 
-            alt="Pangaré Automotivo Logo" 
-            className="h-20 md:h-28 w-auto object-contain"
-          />
-        </div>
+        {/* Logo Section - Text Only */}
+        <a href="#" onClick={(e) => handleScroll(e, 'root')} className="flex flex-col leading-none cursor-pointer group">
+          <span className="font-display font-black text-2xl md:text-3xl uppercase tracking-tighter text-accent-dark group-hover:text-primary transition-colors">
+            Pangaré
+          </span>
+          <span className="font-display font-bold text-xs md:text-sm uppercase tracking-[0.3em] text-primary group-hover:text-accent-dark transition-colors">
+            Automotivo
+          </span>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 justify-end items-center gap-8">
@@ -39,7 +40,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2" aria-label="Abrir menu">
             <span className="material-symbols-outlined text-4xl cursor-pointer text-accent-dark">
               {mobileMenuOpen ? 'close' : 'menu'}
             </span>

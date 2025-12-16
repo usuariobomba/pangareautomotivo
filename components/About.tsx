@@ -38,12 +38,14 @@ const About: React.FC = () => {
           </div>
           
           <div className="w-full lg:w-5/12 aspect-[4/5] bg-gray-200 rounded-lg overflow-hidden relative border-2 border-black shadow-[12px_12px_0px_0px_#EF233C]">
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo9Qp9PbbDON-VA3_C41sBppTVmBBWc_mgmMYIg1eLP3efkhZXga5-9rnpnfitpShJ1ajMB6C-GPS_WHwnOGVXTyqXLQOpyqz0qg5PyS1-VaLW94E2UwKHHyW0Enfn-e3jBdMW06yv5jEQSEb39Re-NLh1dGBZTtGkTZH4FG7lNdLV10Dj_y1MZoOI3rOAV-7Tkq1j-yRlKi7vXfoAZuANiPrW4yyudx3WHaJncpj0muNCk0CjKmZDiRPOpRcVVKkombat2iyDczI')" }}
+            <img 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9Qp9PbbDON-VA3_C41sBppTVmBBWc_mgmMYIg1eLP3efkhZXga5-9rnpnfitpShJ1ajMB6C-GPS_WHwnOGVXTyqXLQOpyqz0qg5PyS1-VaLW94E2UwKHHyW0Enfn-e3jBdMW06yv5jEQSEb39Re-NLh1dGBZTtGkTZH4FG7lNdLV10Dj_y1MZoOI3rOAV-7Tkq1j-yRlKi7vXfoAZuANiPrW4yyudx3WHaJncpj0muNCk0CjKmZDiRPOpRcVVKkombat2iyDczI" 
+              alt="Fachada da oficina Pangaré Automotivo em Tatuí"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-            <div className="absolute bottom-8 left-8 text-white">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+            <div className="absolute bottom-8 left-8 text-white z-10">
               <p className="font-bold text-lg mb-1">Pangaré Automotivo</p>
               <p className="text-sm text-gray-300">Rua 11 de Agosto, 2993 - Tatuí/SP</p>
             </div>

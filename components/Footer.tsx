@@ -12,6 +12,9 @@ const Footer: React.FC = () => {
               src="https://i.ibb.co/q3cRCJ7c/bannertransp.png" 
               alt="Pangaré Automotivo" 
               className="h-24 md:h-32 w-auto object-contain brightness-0 invert"
+              width="256"
+              height="128"
+              loading="lazy"
             />
           </div>
           <p className="text-gray-400 max-w-sm mb-8 leading-relaxed">

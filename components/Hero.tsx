@@ -16,11 +16,14 @@ const Hero: React.FC = () => {
         {/* Text Content */}
         <div className="flex-1 px-6 py-12 md:py-24 md:pl-20 flex flex-col justify-center items-start z-10 relative overflow-hidden">
           
-          {/* Watermark Logo Background - Positioned higher, no transparency */}
+          {/* Watermark Logo Background */}
           <img 
             src="https://i.ibb.co/RkVy0qrN/logotransparenet.png" 
             alt="" 
             className="absolute right-[-15%] md:right-[-10%] top-[-5%] md:-top-[10%] h-[100%] md:h-[120%] w-auto pointer-events-none select-none object-contain -z-10"
+            width="600"
+            height="600"
+            aria-hidden="true"
           />
 
           <div className="relative z-10">
@@ -62,19 +65,20 @@ const Hero: React.FC = () => {
         </div>
         
         {/* Image Content */}
-        <div className="flex-1 min-h-[400px] md:min-h-auto relative bg-gray-100 border-l-0 md:border-l-4 border-black">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRY4Hxmrn8_rzvFYKe4B-42T50Rm56VoZpTjQeLz_2KFgcbfxbyk-kUZ6p9TW2wKsOh3mhQyKvgGurse7bxfO0ruBR4-dpL94Bo-Mmrwk9Hxei9yCmdKoYDMZmvKFMXoDJyDP8hU61xUEuZDstqLebuOAx5tMf6NZ8fKW47-J9gZJRHFWHWVc76XE9Iz_CjK9Mz0hzjsTtJ4wyAUyakfEMz_S5y9kRR3uEEc65X_QW6HteVwybWdmPiEvfyDg6lq6V8tdG-nG5Pzo')" }}
-            role="img"
-            aria-label="Mecânico profissional da Pangaré Automotivo trabalhando em Tatuí SP"
+        <div className="flex-1 min-h-[400px] md:min-h-auto relative bg-gray-100 border-l-0 md:border-l-4 border-black overflow-hidden">
+          {/* Main Hero Image - Converted from background-image to img for LCP optimization */}
+          <img 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRY4Hxmrn8_rzvFYKe4B-42T50Rm56VoZpTjQeLz_2KFgcbfxbyk-kUZ6p9TW2wKsOh3mhQyKvgGurse7bxfO0ruBR4-dpL94Bo-Mmrwk9Hxei9yCmdKoYDMZmvKFMXoDJyDP8hU61xUEuZDstqLebuOAx5tMf6NZ8fKW47-J9gZJRHFWHWVc76XE9Iz_CjK9Mz0hzjsTtJ4wyAUyakfEMz_S5y9kRR3uEEc65X_QW6HteVwybWdmPiEvfyDg6lq6V8tdG-nG5Pzo"
+            alt="Mecânico profissional da Pangaré Automotivo trabalhando em Tatuí SP"
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
           />
           
           {/* Overlay Pattern */}
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
           
           {/* Badge */}
-          <div className="absolute bottom-10 right-10 md:left-10 md:right-auto bg-white p-4 rounded-sm border-2 border-primary shadow-[6px_6px_0px_0px_rgba(239,35,60,1)] rotate-2 hidden md:block">
+          <div className="absolute bottom-10 right-10 md:left-10 md:right-auto bg-white p-4 rounded-sm border-2 border-primary shadow-[6px_6px_0px_0px_rgba(239,35,60,1)] rotate-2 hidden md:block z-10">
             <p className="font-display font-black text-2xl leading-none flex items-center gap-2 text-accent-dark">
               Tatuí <span className="text-primary text-sm bg-black px-1 py-0.5 text-white">SP</span>
             </p>
