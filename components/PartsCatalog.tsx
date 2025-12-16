@@ -7,21 +7,21 @@ const categories: PartCategory[] = [
     title: 'Peças de Caminhão',
     subtitle: 'Pesados',
     description: 'Distribuidora de peças para caminhões: freios a ar, transmissão, embreagem, motores diesel e filtros.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC464MlfIljRhgjWoHMrJzpVdn0q6dPnar9S8CI8HCjqkKLPMeqfR8VOiF3gqkmg323JWk8s8emI8qX26a-iVOWLDD3pY9lSnEMy1vVvaF_7qyW8iKkSYhvDLJF-p9b4qDseiB8t2OlkLJwAgSWE4HFpVHK9AQiWmkm8GkNJReEZ7MdLzoXgKbLUAt8v__4A_V_n7Ba0LDT6lY7l7csaEbj0QXi_klIIlRWDtTWggMxTyBvF4WJ8J2tz75D_v-8BFriUoBnSJ04lsc'
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC464MlfIljRhgjWoHMrJzpVdn0q6dPnar9S8CI8HCjqkKLPMeqfR8VOiF3gqkmg323JWk8s8emI8qX26a-iVOWLDD3pY9lSnEMy1vVvaF_7qyW8iKkSYhvDLJF-p9b4qDseiB8t2OlkLJwAgSWE4HFpVHK9AQiWmkm8GkNJReEZ7MdLzoXgKbLUAt8v__4A_V_n7Ba0LDT6lY7l7csaEbj0QXi_klIIlRWDtTWggMxTyBvF4WJ8J2tz75D_v-8BFriUoBnSJ04lsc=w600-rw'
   },
   {
     tag: 'Linha Leve',
     title: 'Peças Automotivas',
     subtitle: 'Leves',
     description: 'Auto peças em Tatuí para carros nacionais e importados: Injeção, ignição, correias, freios e suspensão.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCA6PtH_6cA9URyG_IwJb03Uho3tS2pNDrpNFFjZ281vfb9Le7-T6yGnAOZnFcvIUV9-LrE8oKRendMd0OFjjOM6uBzNo8GdT3F_rAoHJhyQndP-r-rb7rSq5NiOlNq9sN3EpYO8Luo4AX1XC_WAYnLxTdLdE-RVWCtPIdIyDuiYJ339FP_SLSyLo_CyuFiC734V5qBJLh8wQMU1qsBdCd6e4lQ5dr255Z_Ids0PZ8y5jIVKefUxLoENfUh6YZXNjZJWkvgBlMAqCM'
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCA6PtH_6cA9URyG_IwJb03Uho3tS2pNDrpNFFjZ281vfb9Le7-T6yGnAOZnFcvIUV9-LrE8oKRendMd0OFjjOM6uBzNo8GdT3F_rAoHJhyQndP-r-rb7rSq5NiOlNq9sN3EpYO8Luo4AX1XC_WAYnLxTdLdE-RVWCtPIdIyDuiYJ339FP_SLSyLo_CyuFiC734V5qBJLh8wQMU1qsBdCd6e4lQ5dr255Z_Ids0PZ8y5jIVKefUxLoENfUh6YZXNjZJWkvgBlMAqCM=w600-rw'
   },
   {
     tag: 'Rodagem',
     title: 'Loja de Pneus',
     subtitle: 'Rodagem',
     description: 'Pneus em Tatuí para linha leve, pesada e agrícola. Trabalhamos com as melhores marcas do mercado (Michelin, Pirelli, Bridgestone).',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDv12sdFkD1zk_ehq2aMIZ3SRGR0CvSad2E1-jhwoZBneCznbIt8j3pUAomRGzXLyBkycRysHS8TwoyoUVFo43L6o_JdQG_9j4zOr3pluVXSPUibuOefYNXXzt6vea4V8sWHZsodnBoYl3oi7H9jMK2eRVxmcgEN9Kkudp3yJg9fvJL8xljPDN1s2Fu9MUisQ6Nu4stW6VYXPbfkLaCdJiJESuUrHyGTurY05pxrJhYvu-JOAD1-BV_WbgQzdx_CAYHPaqodoYVM4Q'
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDv12sdFkD1zk_ehq2aMIZ3SRGR0CvSad2E1-jhwoZBneCznbIt8j3pUAomRGzXLyBkycRysHS8TwoyoUVFo43L6o_JdQG_9j4zOr3pluVXSPUibuOefYNXXzt6vea4V8sWHZsodnBoYl3oi7H9jMK2eRVxmcgEN9Kkudp3yJg9fvJL8xljPDN1s2Fu9MUisQ6Nu4stW6VYXPbfkLaCdJiJESuUrHyGTurY05pxrJhYvu-JOAD1-BV_WbgQzdx_CAYHPaqodoYVM4Q=w600-rw'
   }
 ];
 
@@ -47,13 +47,15 @@ const PartsCatalog: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={index}
-                className="group relative rounded-2xl overflow-hidden aspect-[4/5] border-2 border-transparent hover:border-primary transition-all shadow-lg hover:shadow-2xl"
+                className="group relative rounded-2xl overflow-hidden aspect-[4/5] border-2 border-transparent hover:border-primary transition-all shadow-lg hover:shadow-2xl bg-gray-100"
               >
-                {/* Background Image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${item.image}')` }}
-                  title={`Peças automotivas: ${item.title}`}
+                {/* Background Image converted to Img for lazy loading */}
+                <img 
+                  src={item.image}
+                  alt={`Peças automotivas: ${item.title}`}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 
                 {/* Gradient Overlay */}

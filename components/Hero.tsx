@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         {/* Text Content */}
         <div className="flex-1 px-6 py-12 md:py-24 md:pl-20 flex flex-col justify-center items-start z-10 relative overflow-hidden">
           
-          {/* Watermark Logo Background */}
+          {/* Watermark Logo Background - Low Priority */}
           <img 
             src="https://i.ibb.co/RkVy0qrN/logotransparenet.png" 
             alt="" 
@@ -24,6 +24,8 @@ const Hero: React.FC = () => {
             width="600"
             height="600"
             aria-hidden="true"
+            loading="lazy"
+            fetchPriority="low"
           />
 
           <div className="relative z-10">
@@ -66,12 +68,13 @@ const Hero: React.FC = () => {
         
         {/* Image Content */}
         <div className="flex-1 min-h-[400px] md:min-h-auto relative bg-gray-100 border-l-0 md:border-l-4 border-black overflow-hidden">
-          {/* Main Hero Image - Converted from background-image to img for LCP optimization */}
+          {/* Main Hero Image - Optimized with Google Resize Params (=w1000-rw) */}
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRY4Hxmrn8_rzvFYKe4B-42T50Rm56VoZpTjQeLz_2KFgcbfxbyk-kUZ6p9TW2wKsOh3mhQyKvgGurse7bxfO0ruBR4-dpL94Bo-Mmrwk9Hxei9yCmdKoYDMZmvKFMXoDJyDP8hU61xUEuZDstqLebuOAx5tMf6NZ8fKW47-J9gZJRHFWHWVc76XE9Iz_CjK9Mz0hzjsTtJ4wyAUyakfEMz_S5y9kRR3uEEc65X_QW6HteVwybWdmPiEvfyDg6lq6V8tdG-nG5Pzo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRY4Hxmrn8_rzvFYKe4B-42T50Rm56VoZpTjQeLz_2KFgcbfxbyk-kUZ6p9TW2wKsOh3mhQyKvgGurse7bxfO0ruBR4-dpL94Bo-Mmrwk9Hxei9yCmdKoYDMZmvKFMXoDJyDP8hU61xUEuZDstqLebuOAx5tMf6NZ8fKW47-J9gZJRHFWHWVc76XE9Iz_CjK9Mz0hzjsTtJ4wyAUyakfEMz_S5y9kRR3uEEc65X_QW6HteVwybWdmPiEvfyDg6lq6V8tdG-nG5Pzo=w1000-rw"
             alt="Mecânico profissional da Pangaré Automotivo trabalhando em Tatuí SP"
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
+            decoding="async"
           />
           
           {/* Overlay Pattern */}
