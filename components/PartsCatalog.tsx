@@ -6,21 +6,21 @@ const categories: PartCategory[] = [
     tag: 'Linha Pesada',
     title: 'Peças de Caminhão',
     subtitle: 'Pesados',
-    description: 'Distribuidora de peças para caminhões: freios a ar, transmissão, embreagem, motores diesel e filtros.',
+    description: 'Freios a ar, transmissão, embreagem, motor diesel e filtros. Na linha pesada trabalhamos apenas com peças — não com serviço de oficina.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC464MlfIljRhgjWoHMrJzpVdn0q6dPnar9S8CI8HCjqkKLPMeqfR8VOiF3gqkmg323JWk8s8emI8qX26a-iVOWLDD3pY9lSnEMy1vVvaF_7qyW8iKkSYhvDLJF-p9b4qDseiB8t2OlkLJwAgSWE4HFpVHK9AQiWmkm8GkNJReEZ7MdLzoXgKbLUAt8v__4A_V_n7Ba0LDT6lY7l7csaEbj0QXi_klIIlRWDtTWggMxTyBvF4WJ8J2tz75D_v-8BFriUoBnSJ04lsc=w600-rw'
   },
   {
     tag: 'Linha Leve',
     title: 'Peças Automotivas',
     subtitle: 'Leves',
-    description: 'Auto peças em Tatuí para carros nacionais e importados: Injeção, ignição, correias, freios e suspensão.',
+    description: 'Auto peças em Tatuí para carros nacionais e importados: injeção, ignição, correias, freios e suspensão.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCA6PtH_6cA9URyG_IwJb03Uho3tS2pNDrpNFFjZ281vfb9Le7-T6yGnAOZnFcvIUV9-LrE8oKRendMd0OFjjOM6uBzNo8GdT3F_rAoHJhyQndP-r-rb7rSq5NiOlNq9sN3EpYO8Luo4AX1XC_WAYnLxTdLdE-RVWCtPIdIyDuiYJ339FP_SLSyLo_CyuFiC734V5qBJLh8wQMU1qsBdCd6e4lQ5dr255Z_Ids0PZ8y5jIVKefUxLoENfUh6YZXNjZJWkvgBlMAqCM=w600-rw'
   },
   {
     tag: 'Rodagem',
-    title: 'Loja de Pneus',
+    title: 'Pneus e Rodagem',
     subtitle: 'Rodagem',
-    description: 'Pneus em Tatuí para linha leve, pesada e agrícola. Trabalhamos com as melhores marcas do mercado (Michelin, Pirelli, Bridgestone).',
+    description: 'Pneus para linha leve, pesada e agrícola. Cotamos as marcas disponíveis na rede de fornecedores e informamos preço e prazo.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDv12sdFkD1zk_ehq2aMIZ3SRGR0CvSad2E1-jhwoZBneCznbIt8j3pUAomRGzXLyBkycRysHS8TwoyoUVFo43L6o_JdQG_9j4zOr3pluVXSPUibuOefYNXXzt6vea4V8sWHZsodnBoYl3oi7H9jMK2eRVxmcgEN9Kkudp3yJg9fvJL8xljPDN1s2Fu9MUisQ6Nu4stW6VYXPbfkLaCdJiJESuUrHyGTurY05pxrJhYvu-JOAD1-BV_WbgQzdx_CAYHPaqodoYVM4Q=w600-rw'
   }
 ];
@@ -32,38 +32,37 @@ const PartsCatalog: React.FC = () => {
         <div className="mb-12">
           <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Autopeças Tatuí</span>
           <h3 className="font-display text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 border-l-[12px] border-primary pl-4 text-accent-dark">
-            Catálogo de Peças <br/>e Componentes
+            Conseguimos <br/>Qualquer Peça
           </h3>
           <p className="text-xl text-gray-700 font-medium max-w-3xl leading-relaxed">
-            Sua melhor opção de <span className="text-primary font-bold">Autopeças em Tatuí</span>. Oferecemos TODOS os tipos de peças para manutenção de carros e caminhões. Trabalhamos apenas com as marcas originais para garantir sua segurança.
+            Trabalhamos com o estoque de <span className="text-primary font-bold">vários fornecedores</span> e cotamos cada pedido para achar o menor preço. Por isso não há catálogo nem tabela de preço no site: mande o número original, a placa ou uma foto da peça pelo WhatsApp e respondemos com preço e prazo reais.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {categories.map((item, index) => {
             return (
-              <a 
-                href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20estou%20procurando%20uma%20pe%C3%A7a." 
+              <a
+                href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20preciso%20de%20uma%20pe%C3%A7a%3A%20"
                 target="_blank"
                 rel="noopener noreferrer"
                 key={index}
                 className="group relative rounded-2xl overflow-hidden aspect-[4/5] border-2 border-transparent hover:border-primary transition-all shadow-lg hover:shadow-2xl bg-gray-100"
               >
-                {/* Background Image converted to Img for lazy loading */}
-                <img 
+                <img
                   src={item.image}
                   alt={`Peças automotivas: ${item.title}`}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                   decoding="async"
                 />
-                
+
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
-                
+
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 p-8 w-full translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className={`bg-primary text-white text-xs font-bold px-3 py-1 inline-block rounded mb-3 uppercase tracking-wider`}>
+                  <div className="bg-primary text-white text-xs font-bold px-3 py-1 inline-block rounded mb-3 uppercase tracking-wider">
                     {item.tag}
                   </div>
                   <h2 className="text-white font-display text-3xl font-bold uppercase leading-none mb-3 drop-shadow-md">
@@ -83,11 +82,11 @@ const PartsCatalog: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
-            <a href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20consultar%20o%20estoque%20de%20pe%C3%A7as." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-accent-dark text-white px-8 py-4 rounded-lg font-bold uppercase hover:bg-primary transition-colors border-2 border-transparent hover:border-black shadow-lg">
-                <span>Consultar Estoque no WhatsApp</span>
+            <a href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20preciso%20de%20uma%20pe%C3%A7a%3A%20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-accent-dark text-white px-8 py-4 rounded-lg font-bold uppercase hover:bg-primary transition-colors border-2 border-transparent hover:border-black shadow-lg">
+                <span>Cotar Peça no WhatsApp</span>
                 <span className="material-symbols-outlined text-green-400">chat</span>
             </a>
-            <p className="mt-4 text-sm text-gray-500 font-medium">Atendemos Tatuí, Itapetininga, Sorocaba e região.</p>
+            <p className="mt-4 text-sm text-gray-500 font-medium">Retirada em Tatuí. Atendemos Tatuí, Itapetininga, Sorocaba e região.</p>
         </div>
       </div>
     </section>

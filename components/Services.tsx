@@ -6,25 +6,25 @@ const services: ServiceItem[] = [
     icon: 'car_repair',
     title: 'Manutenção Preventiva',
     description: 'Troca de óleo, filtros, correias e revisão completa. Aumente a vida útil do seu carro evitando problemas mecânicos graves.',
-    items: ['Troca de Óleo', 'Revisão de Férias', 'Alinhamento']
+    items: ['Troca de Óleo', 'Revisão Completa', 'Alinhamento']
   },
   {
     icon: 'engineering',
     title: 'Mecânica Geral em Tatuí',
-    description: 'Diagnóstico computadorizado e reparos de motores, injeção eletrônica, freios ABS e suspensão para carros nacionais e importados.',
+    description: 'Diagnóstico computadorizado e reparos de motores, injeção eletrônica, freios e suspensão para carros nacionais e importados.',
     items: ['Retífica de Motores', 'Suspensão', 'Injeção Eletrônica']
   },
   {
-    icon: 'local_shipping',
-    title: 'Mecânica de Caminhões',
-    description: 'Especialistas em manutenção de frotas e linha pesada. Reduza custos operacionais com serviços rápidos e precisos para sua empresa.',
-    items: ['Gestão de Frotas', 'Freios a Ar', 'Diesel']
+    icon: 'groups',
+    title: 'Atendimento a Frotas',
+    description: 'Sem mensalidade e sem contrato: você chama, a gente encaixa com hora marcada e orça serviço por serviço, com registro por placa.',
+    items: ['Sem Mensalidade', 'Hora Marcada', 'Histórico por Placa']
   },
   {
     icon: 'settings_suggest',
-    title: 'Autopeças em Tatuí',
-    description: 'Loja de peças automotivas com amplo estoque. Peças originais e de reposição para todas as marcas com entrega imediata na região.',
-    items: ['Baterias', 'Peças Originais', 'Acessórios']
+    title: 'Peças — Leve e Pesada',
+    description: 'Conseguimos qualquer peça. Cotamos com vários fornecedores para chegar no menor preço e informamos preço e prazo reais pelo WhatsApp.',
+    items: ['Linha Leve', 'Linha Pesada', 'Cotação por WhatsApp']
   },
 ];
 
@@ -40,12 +40,12 @@ const Services: React.FC = () => {
               Perto de Você
             </h3>
             <p className="text-gray-600 font-medium max-w-2xl text-lg border-l-4 border-gray-300 pl-4">
-              Executamos serviços de mecânica automotiva com rapidez, garantia e transparência. A melhor oficina para quem busca qualidade em Tatuí.
+              Serviço de mecânica na linha leve, feito aqui dentro, com rapidez e transparência. Para linha pesada trabalhamos apenas com peças.
             </p>
           </div>
-          <a 
-            href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20mec%C3%A2nico." 
-            target="_blank" 
+          <a
+            href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20mec%C3%A2nico."
+            target="_blank"
             rel="noopener noreferrer"
             className="font-display font-bold uppercase text-sm bg-black text-white px-6 py-3 rounded hover:bg-primary transition-colors flex items-center gap-2"
           >
@@ -57,9 +57,9 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const isRed = index === 1 || index === 3;
-            
+
             return (
-              <div 
+              <div
                 key={index}
                 className="group bg-white border-b-8 border-gray-200 hover:border-primary p-8 rounded-t-2xl hover:shadow-xl transition-all duration-300 relative overflow-hidden"
               >
@@ -76,7 +76,7 @@ const Services: React.FC = () => {
 
                   <h2 className="font-display text-lg md:text-xl font-bold uppercase mb-3 text-accent-dark pr-8 leading-tight">{service.title}</h2>
                   <p className="text-sm text-gray-600 mb-6 font-medium leading-relaxed min-h-[80px]">{service.description}</p>
-                  
+
                   <ul className="text-xs font-bold uppercase tracking-wide space-y-2 border-t pt-4 border-gray-100">
                     {service.items.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-accent-dark">

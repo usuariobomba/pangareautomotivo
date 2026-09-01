@@ -4,13 +4,13 @@ const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-accent-dark text-[#f8f8f5] pt-16 pb-8 px-4 md:px-20 border-t-[8px] border-primary">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-        
+
         {/* Brand */}
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2 mb-6">
-            <img 
-              src="https://wsrv.nl/?url=https://i.ibb.co/q3cRCJ7c/bannertransp.png&w=400&output=webp" 
-              alt="Pangaré Automotivo" 
+            <img
+              src="https://wsrv.nl/?url=https://i.ibb.co/q3cRCJ7c/bannertransp.png&w=400&output=webp"
+              alt="Pangaré Automotivo"
               className="h-24 md:h-32 w-auto object-contain brightness-0 invert"
               width="256"
               height="128"
@@ -18,13 +18,19 @@ const Footer: React.FC = () => {
             />
           </div>
           <p className="text-gray-400 max-w-sm mb-8 leading-relaxed">
-            Potência e confiança para ir mais longe. Mais de 50 anos impulsionando empresas e motoristas com qualidade.
+            Potência e confiança para ir mais longe. Mais de meio século impulsionando empresas e motoristas com qualidade.
           </p>
-          <a href="https://instagram.com/pangareauto" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors font-bold uppercase tracking-wider text-sm border-b border-gray-700 pb-1">
-            <span className="font-display">Siga no Instagram: @pangareauto</span>
-          </a>
+          <div className="flex flex-col items-start gap-4">
+            <a href="https://wa.me/5515996485258?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#128C4A] text-white font-display font-bold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-colors">
+              <span className="material-symbols-outlined text-base">chat</span>
+              <span>Chamar no WhatsApp</span>
+            </a>
+            <a href="https://instagram.com/pangareauto" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors font-bold uppercase tracking-wider text-sm border-b border-gray-700 pb-1">
+              <span className="font-display">Siga no Instagram: @pangareauto</span>
+            </a>
+          </div>
         </div>
-        
+
         {/* Contact Info */}
         <div>
           <h4 className="font-display font-bold uppercase text-lg mb-6 text-primary tracking-wide">Entre em Contato</h4>
@@ -49,7 +55,7 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        
+
         {/* Hours */}
         <div>
           <h4 className="font-display font-bold uppercase text-lg mb-6 text-primary tracking-wide">Horários</h4>
@@ -69,12 +75,12 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      
+
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium">
-        <p>© 2024 Pangaré Automotivo. Todos os direitos reservados.</p>
+        <p>© 2026 Pangaré Automotivo. Todos os direitos reservados.</p>
         <div className="flex gap-8">
-          <span className="text-gray-600">Tradição desde 19XX</span>
+          <span className="text-gray-600">Mais de meio século em Tatuí</span>
         </div>
       </div>
     </footer>

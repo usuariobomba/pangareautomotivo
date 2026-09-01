@@ -4,19 +4,19 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       question: "Onde encontrar um bom mecânico em Tatuí?",
-      answer: "A Pangaré Automotivo está localizada na Rua 11 de Agosto, 2993, e atua há 50 anos oferecendo serviços de mecânica geral, manutenção preventiva e peças originais em Tatuí e região."
+      answer: "A Pangaré Automotivo está localizada na Rua 11 de Agosto, 2993, e atua há mais de 50 anos oferecendo mecânica geral, manutenção preventiva e peças em Tatuí e região."
     },
     {
-      question: "Vocês realizam manutenção de frotas em Tatuí?",
-      answer: "Sim! Somos especialistas em atendimento corporativo e manutenção de frotas para empresas como Localiza, Movida e Unidas. Oferecemos agilidade e redução de custos operacionais."
+      question: "Vocês atendem frotas de empresas?",
+      answer: "Sim. O atendimento a frotas é feito sem mensalidade e sem contrato: a empresa chama pelo WhatsApp, encaixamos com hora marcada e orçamos serviço por serviço, com registro de cada intervenção por placa."
     },
     {
       question: "Quais peças automotivas vocês vendem?",
-      answer: "Temos um estoque completo de peças originais para carros (linha leve) e caminhões (linha pesada), incluindo motores, suspensão, freios, filtros, correias e pneus de diversas marcas."
+      answer: "Conseguimos qualquer peça de linha leve e linha pesada. Não mantemos catálogo nem tabela de preço no site porque cada pedido é cotado com vários fornecedores para chegar no menor preço — envie o número original, a placa ou uma foto da peça pelo WhatsApp e respondemos com preço e prazo reais."
     },
     {
-      question: "A oficina atende caminhões e veículos pesados?",
-      answer: "Sim, somos referência em mecânica diesel e manutenção de caminhões em Tatuí. Nossa equipe é capacitada para diagnósticos complexos em linha pesada."
+      question: "A oficina faz serviço em caminhões e veículos pesados?",
+      answer: "Não. Na linha pesada trabalhamos apenas com o fornecimento de peças. O serviço de oficina é feito na linha leve: carros, utilitários e vans."
     }
   ];
 

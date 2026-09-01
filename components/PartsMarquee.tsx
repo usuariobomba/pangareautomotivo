@@ -3,10 +3,10 @@ import React from 'react';
 const PartsMarquee: React.FC = () => {
   const items = [
     '• PANGARÉ AUTOMOTIVO',
-    '• 50 ANOS DE TRADIÇÃO',
-    '• PEÇAS ORIGINAIS',
+    '• MAIS DE 50 ANOS',
+    '• PEÇAS LEVE E PESADA',
     '• ATENDIMENTO FROTAS',
-    '• QUALIDADE GARANTIDA',
+    '• COTAÇÃO NO WHATSAPP',
     '• TATUÍ - SP'
   ];
 
