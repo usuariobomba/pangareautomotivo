@@ -188,8 +188,38 @@ function ContactPage() {
   </>;
 }
 
-function Footer() {
-  return <><Marquee /><footer className="footer page-pad"><div className="footer-grid"><div><img src={ASSETS.logoWhite} alt="Pangaré Automotivo"/><p>Rua 11 de Agosto, 2993 — Tatuí/SP</p><p>(15) 99648-5258 · (15) 3022-4063</p><p>luiz@pangareautomotivo.com.br</p></div><div><b>Serviços</b><span>Manutenção preventiva</span><span>Mecânica geral</span><span>Frotas</span></div><div><b>Peças</b><span>Linha leve</span><span>Linha pesada</span><span>Cotação por WhatsApp</span></div><div><b>Pangaré</b><span>Mais de 50 anos</span><span>@pangareauto</span><span>Tatuí · SP</span></div></div><div className="footer-word">Pangaré</div><div className="footer-meta"><span>Seg–Sex 08:00–18:00 · Sáb e Dom fechado</span><span>© {new Date().getFullYear()} Pangaré Automotivo</span></div></footer></>;
+function Footer({ go }: { go: (p: PageKey) => void }) {
+  return <><Marquee /><footer className="footer page-pad">
+    <div className="footer-grid">
+      <div>
+        <button className="footer-brand" onClick={() => go('inicio')} aria-label="Ir para o início"><img src={ASSETS.logoWhite} alt="Pangaré Automotivo"/></button>
+        <a className="footer-link" href="https://www.google.com/maps/search/?api=1&query=Rua+11+de+Agosto+2993+Tatu%C3%AD+SP" target="_blank" rel="noopener noreferrer">Rua 11 de Agosto, 2993 — Tatuí/SP</a>
+        <a className="footer-link" href="tel:+5515996485258">(15) 99648-5258</a>
+        <a className="footer-link" href="tel:+551530224063">(15) 3022-4063</a>
+        <a className="footer-link" href="mailto:luiz@pangareautomotivo.com.br">luiz@pangareautomotivo.com.br</a>
+      </div>
+      <div>
+        <b>Serviços</b>
+        <button className="footer-link" onClick={() => go('servicos')}>Manutenção preventiva</button>
+        <button className="footer-link" onClick={() => go('servicos')}>Mecânica geral</button>
+        <button className="footer-link" onClick={() => go('frotas')}>Frotas</button>
+      </div>
+      <div>
+        <b>Peças</b>
+        <button className="footer-link" onClick={() => go('pecas')}>Linha leve</button>
+        <button className="footer-link" onClick={() => go('pecas')}>Linha pesada</button>
+        <a className="footer-link" href={waHref('Olá! Preciso de uma peça: ')} target="_blank" rel="noopener noreferrer">Cotação por WhatsApp</a>
+      </div>
+      <div>
+        <b>Pangaré</b>
+        <button className="footer-link" onClick={() => go('inicio')}>Mais de 50 anos</button>
+        <a className="footer-link" href="https://www.instagram.com/pangareauto/" target="_blank" rel="noopener noreferrer">@pangareauto</a>
+        <button className="footer-link" onClick={() => go('contato')}>Tatuí · SP</button>
+      </div>
+    </div>
+    <button className="footer-word" onClick={() => go('inicio')} aria-label="Voltar ao início">Pangaré</button>
+    <div className="footer-meta"><span>Seg–Sex 08:00–18:00 · Sáb e Dom fechado</span><span>© {new Date().getFullYear()} Pangaré Automotivo</span></div>
+  </footer></>;
 }
 
 function App() {
@@ -208,7 +238,7 @@ function App() {
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
-  return <div className="site-shell"><Navbar page={page} go={go}/><main>{page === 'inicio' && <Home go={go}/>} {page === 'servicos' && <ServicesPage go={go}/>} {page === 'pecas' && <PartsPage go={go}/>} {page === 'frotas' && <FleetsPage/>} {page === 'contato' && <ContactPage/>}</main><a className="whatsapp-float" href={waHref('Olá! Vim pelo site da Pangaré Automotivo.')} target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><WhatsIcon size={26}/><span>WhatsApp</span></a><Footer/></div>;
+  return <div className="site-shell"><Navbar page={page} go={go}/><main>{page === 'inicio' && <Home go={go}/>} {page === 'servicos' && <ServicesPage go={go}/>} {page === 'pecas' && <PartsPage go={go}/>} {page === 'frotas' && <FleetsPage/>} {page === 'contato' && <ContactPage/>}</main><a className="whatsapp-float" href={waHref('Olá! Vim pelo site da Pangaré Automotivo.')} target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><WhatsIcon size={26}/><span>WhatsApp</span></a><Footer go={go}/></div>;
 }
 
 export default App;
